@@ -3,7 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+section {
+    height: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+.log_img{
+    width: 60%;
+  height: auto;
+}
 #banner{
     background-color: rgb(75, 0, 173);
     width: 100%;
