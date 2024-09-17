@@ -14,7 +14,7 @@ section {
   height: auto;
 }
 #banner{
-    background-color: rgb(75, 0, 173);
+    background-color: #6C0B70;
     width: 100%;
     color: aliceblue;  
     display: flex;
@@ -35,7 +35,7 @@ a{
 }
 
 a:hover{
-    color: rgb(255, 145, 0);
+    color: #ffde59;
     background-color: rgb(102, 0, 197);
     border-radius: 15px;
 
@@ -44,8 +44,15 @@ a:hover{
 .T{
     text-align: center;
     padding: 10px;
-    font-size: 65px;
+    font-size: 50px;
 }
+
+.t{
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+
 input[type="text"],
         input[type="password"],
         input[type="submit"] {
@@ -79,4 +86,15 @@ input[type="text"],
 .t{
     text-align: center;
     padding: 15px;
+}
+
+.usu_icone {
+    width: 40px; 
+    height: auto;  
+}
+
+.log_img {
+    max-width: 300px;
+    height: auto;
+    display: block;
 }
