@@ -1,8 +1,29 @@
 @charset "UTF-8";
+body{
+    background-color: aliceblue;
+}
+
+.img{
+    width: 150px;
+    height: auto;
+    padding: 20px;
+}
+
+.t{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+   
+}
+
+.usertop{
+    display: flex;
+}
 
 div.conteiner {
     display: flex;
     flex-flow: row wrap;
+    
 }
 
 div.item {
@@ -12,6 +33,7 @@ div.item {
     align-content: center;
     text-decoration:underline;
     font-weight: bolder;
+    
 }
 
 div#cx {
@@ -19,5 +41,6 @@ div#cx {
     flex-grow: 1;
     flex-basis: 200px;
     height: 20vh;
+    
 }
 

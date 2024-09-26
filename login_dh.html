@@ -9,21 +9,22 @@
 </head>
 
 <body>
-    <form action="index.html" method="post">
+    <form action="log.php" method="post" id="formLogin">
         <img src="logo.png" alt="logo" class="log_img">
         <br>
         <div class="container">
-            <label for="cpf"></label>
-            <input type="email" placeholder="Digite seu E-mail" maxlength="50" name="cpf"
+            <label for="email"></label>
+            <input type="email" placeholder="Digite seu E-mail" id="email" maxlength="50" name="email"
                 title="Digite um E-mail válido " required>
             <br>
             <br>
-            <label for="password"></label>
-            <input type="password" placeholder="Digite sua senha" name="password" required>
-            <input type="submit" value="Entre">
+            <label for="senha"></label>
+            <input type="password" id="senha" placeholder="Digite sua senha" name="senha" required>
+            <input type="submit" value="Entre" href="pagusu.php">
             <p>Ainda não tem uma conta? <a href="registro_dh.html" class="link">Registre-se aqui</a>.</p>
         </div>
     </form>
+
 </body>
 
 </html>

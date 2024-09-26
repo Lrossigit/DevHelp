@@ -1,3 +1,10 @@
+<?php
+if (isset($_GET['nome'])) {
+    $nome = htmlspecialchars($_GET['nome']);
+} else {
+    $nome = "Usuário";
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
