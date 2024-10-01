@@ -1,19 +1,62 @@
-@charset "UTF-8";
-body{
-    background-color: aliceblue;
+/*config de ambas as pag*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-color: #960C9D;
+}
+
+#banner {
+    background-color: #6C0B70;
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    padding: 0 5% 0;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+#banner a {
+    color: aliceblue;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#banner a:hover {
+    color: #ffde59;
+    background-color: rgb(102, 0, 197);
+    border-radius: 15px;
+
+}
+
+.log_img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.usu_icone {
+    width: 40px;
+    height: auto;
 }
 
 .img{
     width: 150px;
     height: auto;
     padding: 20px;
-}
-
-.t{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-   
 }
 
 .usertop{
@@ -44,3 +87,21 @@ div#cx {
     
 }
 
+.txex{
+    color: white;
+}
+
+.text {
+    text-align: justify;
+    margin: 30px;
+    font-size: 20px;
+    color: #ffe993;
+}
+
+.t {
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+    color: #ffe993;
+
+}

@@ -22,7 +22,7 @@ if (isset($_GET['nome'])) {
         <nav class="navbar">
             <a href="index.html">Página inicial</a>
             <a href="aulas.html">Aulas</a>
-            <a href="materiais.html">Materiais</a>
+            <a href="apr.html">Aprimore-se</a>
             <a href="pag_user.html">Pagina do usuario</a>
             <a href="login_dh.html" class="">
                 <img src="usu.png" alt="usuário" class="usu_icone">

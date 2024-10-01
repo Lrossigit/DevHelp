@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo Simples de JavaScript</title>
+<style>
+
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin-top: 50px;
+}
+
+#message {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+button {
+padding: 10px 20px;
+font-size: 16px;
+}
+</style>
+</head>
+<body>
+
+<div id="message">Clique no botão para mudar o texto!</div>
+<button onclick="mudarTexto()">Clique aqui</button>
+
+<script>
+function mudarTexto() {
+document.getElementById("message").innerHTML = "O texto foi alterado com sucesso!";
+}
+</script>
+</body>
+</html>
