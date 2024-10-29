@@ -19,26 +19,49 @@ body {
     padding: 0 5% 0;
     justify-content: space-between;
     height: 100px;
-
 }
 
-#banner a {
+.link {
     color: aliceblue;
     padding: 10px;
     text-decoration: none;
 }
 
-#banner a:hover {
+.link:hover {
     color: #ffde59;
-    background-color: rgb(102, 0, 197);
-    border-radius: 15px;
+    background-color: #4f0057;
+    border-radius: 5px;
 
 }
 
-.log_img {
-    max-width: 300px;
-    height: auto;
-    display: block;
+.button-login {
+    color: #4f0057;
+    background-color: #e3ca65;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.button-login:hover {
+    background-color: #645722;
+    color: white;
+}
+
+.usu-button {
+    color: #ffde59;
+    background-color: #4f0057;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-decoration: none;
+}
+
+.usu-button:hover {
+    color: white;
+    background-color: #400147;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .navbar {
@@ -48,19 +71,40 @@ body {
     text-align: center;
 }
 
+.button_altsenha {
+    display: inline-block;
+    width: 250px;
+    margin-top: 20px;
+    background-color: #e3ca65;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    padding: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.log_img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
 .usu_icone {
     width: 40px;
     height: auto;
 }
 
-.img{
-    width: 150px;
-    height: auto;
-    padding: 20px;
+.usertop{
+ text-align: center;
 }
 
-.usertop{
-    display: flex;
+.img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    padding: 20px;
 }
 
 div.conteiner {
@@ -105,3 +149,4 @@ div#cx {
     color: #ffe993;
 
 }
+

@@ -1,38 +1,39 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$database = 'devhelper';
+include 'db_connect.php';
 
-$conn = new mysqli($host, $user, $password, $database);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = $_POST['nome'];
+    $sobrenome = $_POST['sobrenome'];
+    $email = $_POST['email'];
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Criptografa a senha
+    $confirmarSenha = $_POST['confirmarSenha'];
+    $tipo_usuario = $_POST['tipo_usuario'];
 
-// Verificar conexão
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+    if ($_POST['senha'] !== $_POST['confirmarSenha']) {
+        echo "As senhas não coincidem!";
+    } else {
+        try {
+            if ($tipo_usuario == 'aluno') {
+                // Cadastro de aluno
+                $stmt = $conn->prepare("INSERT INTO users (nome, sobrenome, email, senha) VALUES (:nome, :sobrenome, :email, :senha)");
+            } else {
+                // Cadastro de mentor
+                $stmt = $conn->prepare("INSERT INTO mentores (nome, sobrenome, email, senha) VALUES (:nome, :sobrenome, :email, :senha)");
+            }
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':sobrenome', $sobrenome);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':senha', $senha);
+            $stmt->execute();
+
+            echo "Cadastro realizado com sucesso!";
+            header("Location: log.php");
+        } catch(PDOException $e) {
+            echo 'Erro: ' . $e->getMessage();
+        }
+    }
 }
 
-$nome = $_POST['nome'];
-$sobrenome = $_POST['sobrenome'];
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-$confirmar_senha = $_POST['confirmarSenha'];
-
-// Verificar se as senhas coincidem
-if ($senha !== $confirmar_senha) {
-    echo "As senhas não coincidem!";
-    exit();
-}
-
-
-$senha_hash = password_hash($senha, PASSWORD_BCRYPT);
-
-$sql = "INSERT INTO users (nome, sobrenome, email, senha) VALUES ('$nome', '$sobrenome', '$email', '$senha_hash')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Cadastro realizado com sucesso!";
-} else {
-    echo "Erro: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
 ?>
+
+<script src="firebase-init.js"></script>

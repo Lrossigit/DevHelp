@@ -1,38 +1,26 @@
-<?php
-// Conectar ao banco de dados
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$database = 'devhelper';
-
-$conn = new mysqli($host, $user, $password, $database);
-
-// Verificar conexão
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-}
-
-// Obter dados do formulário
-$email = $_POST['email'];
-$senha = $_POST['senha'];
-
-// Verificar se o e-mail existe no banco de dados
-$sql = "SELECT * FROM users WHERE email='$email'";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // Verificar a senha
-    $user = $result->fetch_assoc();
-    if (password_verify($senha, $user['senha'])) {
-        echo "Login realizado com sucesso!";
-        // Redirecionar para a página de usuário
-        header('Location: pagusu.php?nome=' . urlencode($user['nome']));
-    } else {
-        echo "Senha incorreta!";
-    }
-} else {
-    echo "Usuário não encontrado!";
-}
-
-$conn->close();
-?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_log.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="esc_log">
+        <form>
+            <img src="imgs/logo.png" alt="logo" class="log_img">
+            <H1 class="h1">Deseja realizar o login como:</H1>
+            <div class="up_bot">
+                <button type="button" onclick="window.location.href='login_aluno.php'">Aluno</button>
+                <button type="button" onclick="window.location.href='log_prof.php'">Mentor</button>
+            </div>
+            <div class="bot_al">
+                <button type="button" onclick="window.location.href='index.php'">Voltar</button>
+            </div>
+                <p class="al">Ainda não tem uma conta? <a href="registro_dh.php" class="link">Registre-se aqui</a>.</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

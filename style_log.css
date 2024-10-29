@@ -63,3 +63,73 @@ a {
     text-decoration: none;
     color: #ffde59;
 }
+
+/* PAG LOGIN */
+
+.h1{
+    text-align: center;
+}
+
+.bot_al{
+    text-align: center;
+}
+
+.up_bot{
+    text-align: center;
+}
+
+.al{
+    text-align: center;
+}
+
+button[type="button"] {
+    border-radius: 90px;
+    width: 30%;
+    background-color: #ffde59;
+    border: 1px solid #ffde59;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+button[type="button"]:hover {
+    background-color: #3a063b;
+    color: #ffffff;
+}
+
+button[type="submit"] {
+    border-radius: 90px;
+    width: 30%;
+    background-color: #ffde59;
+    border: 1px solid #ffde59;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #3a063b;
+    color: #ffffff;
+}
+
+.stybot{
+    border-radius: 90px;
+    width: 30%;
+    background-color: #ffde59;
+    border: 1px solid #ffde59;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
